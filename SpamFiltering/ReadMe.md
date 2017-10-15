@@ -25,7 +25,7 @@ I readed the follow papers to know about the project.
 <ol>4.-<i>Contributions to the Study of SMS Spam Filtering: New Collection and Results</i> ( 2011 ) by Almeida, T.A., Gómez Hidalgo, J.M., Yamakami, A</ol>
 </nav>
 
-#Text processing
+# Text processing
 i mapped the url , phone number , and cash segmentation in Direccion , Number and Dinero word respectively; then all text to lowercase and remove all stop words.
 To represent the text using tf-idf with max-features: 100 and n-gram = (1,2) and minimum frequency is 0.01%
 
