@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title> Is Your SMS a Spam?</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Carlos Chicata Farfan">
+    <meta name="description" content="this is a SPA tell you if your text is a spam sms">
+    <title>Is spam my text?</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for("static", filename="reset.css")}}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for("static", filename="style.css")}}">
+    <link type="text/css" rel="stylesheet" href="{{url_for("static", filename="materialize.min.css")}}">
+</head>
+<body>
+<div class="container ViewArea">
+    <div class="row">
+        <div class="center-align Titulo">Is Your SMS a Spam?</div>
+    </div>
+    <div class="container Marco">
+        <p class="Pregunta" >What's that?</p>
+        <p> This is a SPA say you how probability your SMS will be a spam acording a spam filtering!!!</p><br>
+        <p class="Pregunta"> How can i use it?</p>
+        <p>Well!, you only need to write a SMS 0f 160 characters or less, then clicked the "Is Spam?" button and see the answer!!!</p>
+    </div>
+    <div class="containe center-align">
+        <p class="center-align Subtitulo" > Write your SMS Text!! =D </p>
+        <form class="center-align Marco z-depth-5" action="http://localhost:5000/Procesando"  method="post">
+            <textarea name="SMS" maxlength="160" placeholder="write your SMS!"></textarea>
+            <button class="btn" type="submit" > Is Spam?</button>
+        </form>
+    </div>
+    <div class="container Espacio">
+        <p class="center-align"> Porcentaje : {{por}} </p>
+        <div class="progress">
+            <div class="determinate" style="width:{{Cantidad}}"></div>
+        </div>
+        <p class="center-align Subtitulo">Processed text </p>
+        <p class="center-align">{{TextoOriginal}}</p>
+    </div>
+</div>
+</body>
+</html>
