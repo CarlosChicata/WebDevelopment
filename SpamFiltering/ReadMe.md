@@ -30,4 +30,5 @@ i mapped the url , phone number , and cash segmentation in Direccion , Number an
 To represent the text using tf-idf with max-features: 100 and n-gram = (1,2) and minimum frequency is 0.01%
 
 # Future Work
-i would like to implement the Relevance Vector machine(RVM) to comparate with my model and prove if RVM is outperformance of Bernoulli Naive bayes.
+i would like to implement the Relevance Vector machine(RVM) to comparate with my model and prove if RVM is outperformance of Bernoulli Naive bayes. Also include structural features and linguistic Inquiry and word count features to kwno if they can get more accuracy and recall in our model.
+
