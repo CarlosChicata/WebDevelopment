@@ -3,4 +3,5 @@ this folder containt all  my project in my personal life as web development. i h
 # List of project
 <nav>
   <ol><i><b>SpamFiltering</b></i> : contain a simple SPA tell you the probability that your SMS text will be classified like Spam SMS</ol>
+  <ol><i><b>Damas game</b></i>: this is a simple SPA that you can play "Damas" against a computer</ol>
 </nav>
