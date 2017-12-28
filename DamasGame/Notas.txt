@@ -1,0 +1,3 @@
+----------------->>>>>>>>>>>>> pendientes
+1.- Poder crear un json que indice el origen y destino de un ficha en el tablero, para la
+animacion desde el backend.
