@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" author="Carlos F. Chicata Farfán">
+        <meta name="Goals of app" content="this is a recommendation system with QA system to find restaurants for the users according his need">
+        <meta name="Purpose Personal" content="A SPA to show my skills in webtech">
+        <meta name="Full Stack" content="Frontened: Vue,js, bootstrap, html5, js, css3. Backend: Flask, python. Data: Kaggle dataset">
+        <title> RestaFind: to find good places for good moments</title>
+        <!--- those are external files will use --->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='reset.css')}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <!--- those are own file will use--->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='Principal.css')}}">
+
+    </head>
+    <body>
+        <div class="MarcoTitulo">
+            <p class="Titulo"> RestaFind</p>
+            <p class="Subtitulo">to find good places<br> for good moments</p>
+        </div>
+
+        <form class="MarcoConsulta">
+            <textarea class="AreaConsulta" name="ConsultaUsuario" placeholder="Write here your querys!!!">
+            </textarea>
+            <button class="btn" type="submit"> Search</button>
+        </form>
+
+    </body>
+</html>

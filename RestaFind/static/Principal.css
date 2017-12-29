@@ -1,0 +1,45 @@
+@font-face{
+    font-family:MasterOfComicsPersonal;
+    src: url(MasterOfComicsPersonal.ttf);
+}
+
+@font-face{
+    font-family:LearningCurve;
+    src: url(LearningCurve.ttf);
+}
+
+body{
+    background:#fafafa;
+    padding-right:25%;
+    padding-left:25%;
+}
+
+.MarcoTitulo{
+    margin-top:45px;
+    text-align:center;
+}
+
+.Titulo{
+	font-family:MasterOfComicsPersonal;
+	font-size:75px;
+	color:#ff3d00;
+	display:inline-block;
+}
+
+.Subtitulo{
+	font-family:LearningCurve;
+	font-size:35px;
+	color:#78909c;
+	margin-left:20px;
+	display:inline-block;
+}
+
+.AreaConsulta{
+    height:150px;
+    width: 90% auto;
+    margin-top:20px;
+    padding:5px;
+    border-radius:15px;
+    display: block;
+    background-color:white;
+}
