@@ -9,7 +9,7 @@
 }
 
 body{
-    background:#fafafa;
+    background:#eeeeee;
     padding-right:25%;
     padding-left:25%;
 }
@@ -34,12 +34,24 @@ body{
 	display:inline-block;
 }
 
+.MarcoConsulta{
+    text-align:center;
+}
+
 .AreaConsulta{
     height:150px;
+    min-height:150px;
+    max-height:300px;
     width: 90% auto;
     margin-top:20px;
     padding:5px;
     border-radius:15px;
     display: block;
+    resize:vertical;
     background-color:white;
+}
+
+.AreaBoton{
+    margin-top:5px;
+    width:100%;
 }
