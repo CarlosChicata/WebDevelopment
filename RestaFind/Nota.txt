@@ -1,0 +1,13 @@
+1.- NOTA DE PRESENTACION DE DATOS
+	- NOMBRE DEL RESTAURANT
+	- TIPO DE COMIDA
+	- TIPO DE PAGO
+	- PARKING
+	- HORARIO ( horas y dias )
+	- RATING ( COMIDA - LUGAR - SERVICIO)
+DATA: MAX DATA : 916
+chefmozaccepts.csv 
+chefmozcuisine.csv 
+chefmozparking.csv
+chefmozhours4.csv
+rating_final.csv
