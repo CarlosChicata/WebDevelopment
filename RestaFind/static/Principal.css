@@ -64,12 +64,13 @@
 	font-family:LearningCurve;
 	font-size:50px;
 	font-weight:lighter;
-	color:#78909c;
-	text-shadow: 1px 2px white;
+	color:#bdbdbd;
+	#color:#78909c;
+	#text-shadow: 1px 2px white;
 }
 
 .st-Buscador {
-    background:url(/static/image/PizarraNegra.jpg);
+    #background:url(/static/image/PizarraNegra.jpg);
     min-width: 65%;
     max-width:70%;
     height:120px;
@@ -99,6 +100,6 @@
 }
 
 .st-BuscadorBoton:hover{
-    background-color:rgba(0,0,0,0.3);
+    background-color:rgba(0,0,0,0.6);
     transition: all 0.5s ease-in-out;
 }
