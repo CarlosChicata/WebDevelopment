@@ -1,57 +1,104 @@
 @font-face{
     font-family:MasterOfComicsPersonal;
     src: url(MasterOfComicsPersonal.ttf);
+    font-weight:bold;
 }
 
 @font-face{
     font-family:LearningCurve;
     src: url(LearningCurve.ttf);
+    font-weight:bold;
 }
 
-body{
-    background:#eeeeee;
-    padding-right:25%;
-    padding-left:25%;
+@font-face{
+    font-family:SketchCollege;
+    src: url(SketchCollege.ttf);
+    font-weight:normal;
 }
 
-.MarcoTitulo{
-    margin-top:45px;
+@font-face{
+    font-family:HomemadeApple;
+    src: url(HomemadeApple.ttf);
+    font-weight:bold;
+}
+
+@font-face{
+    font-family:Tiza;
+    src: url(tiza.ttf);
+    font-weight:bold;
+}
+/* css - grid and space */
+.EsquemaGeneral{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+}
+
+.EsquemaBuscador{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:10px;
+
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.EsquemaTitulo{
+    padding-top:40px;
+}
+
+/* css - style - size */
+.st-Titulo{
     text-align:center;
-}
-
-.Titulo{
-	font-family:MasterOfComicsPersonal;
-	font-size:75px;
+    font-family:MasterOfComicsPersonal;
+   	font-size:75px;
 	color:#ff3d00;
-	display:inline-block;
+	text-shadow: 1px 2px black;
 }
 
-.Subtitulo{
-	font-family:LearningCurve;
-	font-size:35px;
-	color:#78909c;
-	margin-left:20px;
-	display:inline-block;
-}
-
-.MarcoConsulta{
+.st-Subtitulo{
     text-align:center;
+	font-family:LearningCurve;
+	font-size:50px;
+	font-weight:lighter;
+	color:#78909c;
+	text-shadow: 1px 2px white;
 }
 
-.AreaConsulta{
-    height:150px;
-    min-height:150px;
-    max-height:300px;
-    width: 90% auto;
-    margin-top:20px;
-    padding:5px;
-    border-radius:15px;
-    display: block;
-    resize:vertical;
-    background-color:white;
+.st-Buscador {
+    background:url(/static/image/PizarraNegra.jpg);
+    min-width: 65%;
+    max-width:70%;
+    height:120px;
+    border-radius:5px;
 }
 
-.AreaBoton{
-    margin-top:5px;
-    width:100%;
+.st-TituloBuscador{
+    font-family:SketchCollege;
+    font-size:40px;
+    text-align:center;
+    color:white;
+}
+
+.st-BuscadorTexto{
+    width:85%;
+}
+
+.st-BuscadorBoton{
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    font-family:SketchCollege;
+    font-size:20px;
+}
+
+.st-BuscadorBoton:hover{
+    background-color:rgba(0,0,0,0.3);
+    transition: all 0.5s ease-in-out;
 }

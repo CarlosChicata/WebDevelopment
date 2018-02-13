@@ -1,0 +1,138 @@
+/*titulo*/
+.MarcoTitulo{
+    #background:#b3e5fc;
+    padding-top:45px;
+    padding-bottom:45px;
+    text-align:center;
+}
+
+.Titulo{
+	font-family:MasterOfComicsPersonal;
+	font-size:75px;
+	#font-weight:lighter;
+	color:#ff3d00;
+	display:inline-block;
+}
+
+.Subtitulo{
+	font-family:LearningCurve;
+	font-size:35px;
+	font-weight:lighter;
+	color:#78909c;
+	margin-left:20px;
+	display:inline-block;
+}
+
+/*Marco de consulta*/
+.MarcoConsulta{
+    text-align:center;
+    padding-right:25%;
+    padding-left:25%;
+}
+
+.AreaConsulta{
+    height:150px;
+    min-height:150px;
+    max-height:300px;
+    width: 90% auto;
+    margin-top:20px;
+    padding:5px;
+    border-radius:15px;
+    display: block;
+    resize:vertical;
+    background-color:white;
+}
+
+.AreaBoton{
+    margin-top:5px;
+    width:100%;
+}
+
+/*Marco de presentacion de data*/
+
+.MarcoRestaurant{
+    #width:80% auto;
+    background-color:white;
+    margin-top:10px;
+    padding-top:5px;
+    padding-right:25%;
+    padding-left:25%;
+}
+
+.DatosRestaurant{
+    display:inline-block;
+}
+
+/****************/
+/* area de eslogan*/
+.MarcoLogan{
+   padding-left: 2%;
+   padding-right:5%;
+   display:inline-block;
+}
+
+img{
+    height:240px;
+    width:320px;
+    border:25px white;
+}
+
+/////////////////////////////////////////////
+        <div class="MarcoLogan">
+            <div class="Foto">
+                <img src="/static/image/postre.jpg">
+            </div>
+            <div class="Foto">
+                <img src="/static/image/sopa.jpg">
+            </div>
+            <div class="Foto">
+                <img src="/static/image/comida.jpg">
+            </div>
+        </div>
+        <header class="AreaTitulo">
+            <div class="conte">
+                 <p class="Titulo">RestaFind</p>
+            </div>
+        </header>
+
+        /** titulo **/
+.MarcoLogan{
+    display: flex;
+    justify-content:center;
+    position:;fixed
+}
+
+.Foto > img{
+    height:300px;
+    width: 400px;
+    border:12px solid white;
+    border-bottom:26px solid white;
+    margin:5px;
+    box-shadow: 2px 2px 5px;
+}
+
+.AreaTitulo{
+    height:120px;
+    width:60% auto;
+    text-align:center;
+    background-color:white;
+    margin-right:15%;
+    margin-left:15%;
+    border-radius:10px;
+    position: relative;
+    top:-50px;
+}
+
+.Titulo{
+    font-family:MasterOfComicsPersonal;
+   	font-size:75px;
+	color:#ff3d00;
+}
+
+.Subtitulo{
+	font-family:LearningCurve;
+	font-size:35px;
+	font-weight:lighter;
+	color:#78909c;
+	display:inline-block;
+}
