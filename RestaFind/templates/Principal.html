@@ -22,9 +22,20 @@
         </header>
         <form class="st-Buscador EsquemaBuscador" id="buscador">
              <header class="st-TituloBuscador" >{%raw%}{{titulo}}{%endraw%}</header>
-            <input class="st-BuscadorTexto" type="text" name="description"><br>
+            <input class="st-BuscadorTexto" type="text" name="description" v-model="descripcion"><br>
             <input type="submit" class="st-BuscadorBoton" value="finding the restaurant">
         </form>
+        <div class="EsquemaReferencias" id="referencias">
+            <!---:style="{ 'background-image' : 'url(' + ref.image + ')' }" -->
+            <div v-for="ref in consultores" class="EsquemaTarjeta" v-bind:style="{ 'background-image' : 'url(' + ref.image + ')' }">
+                <div class="Tarjeta">
+                    <div class="texto">
+                        <p class="st-TarjetaTitulo">{%raw%}{{ref.name}}{%endraw%}</p>
+                        <p class="st-TarjetaContenido">{%raw%}{{ref.comentario}}{%endraw%}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 <script src="/static/js/Logistica.js"></script>
     </body>

@@ -4,21 +4,41 @@
     por motivos de organizacion escogimos la modularidad apesar que agrega complejidad al proyecto,
     pero escogimos esto por un motivos mas: aprendizaje sobre componentes en Vue.js
 **/
-var comp1 = {
-            template:'#formulario-template',
-            props:['getTitulo']
-        };
 
 new Vue({
     el: '#buscador',
     data:{
         titulo:"tell me your place",
         descripcion:''
-    },
-    components:{
-        'formulario':comp1
     }
+
 });
 
-
+new Vue({
+    el:"#referencias",
+    data:{
+        consultores:[
+            {
+                name: "norman davies",
+                comentario:" i would use this app all time",
+                image:"/static/image/Face1.jpg"
+            },
+            {
+                name:"harold weasley",
+                comentario:" i recommended that all my friend and they like it!",
+                image:"/static/image/Face2.jpg"
+            },
+            {
+                name:"samantha gonzales",
+                comentario:"i feel so comfortable",
+                image:"/static/image/Face3.jpg"
+            },
+            {
+                name:"diana chicata",
+                comentario:" i love that!!",
+                image:"/static/image/Face4.jpg"
+             }
+        ]
+    }
+});
 
