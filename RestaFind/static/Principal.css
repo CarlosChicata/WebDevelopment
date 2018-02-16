@@ -58,6 +58,15 @@
     width:80%;
 }
 
+.EsquemaTarjeta{
+    margin:2px;
+    background-size: cover;
+    border-radius:50%;
+    border: 2px outset white;
+    height: 220px ;
+    width: 220px ;
+    position: relative;
+}
 
 
 /******************* css - style - size ********************/
@@ -116,29 +125,23 @@
 }
 
 /* referenciaas area */
-.EsquemaTarjeta{
-    background-size: cover;
-    border-radius:50%;
-    height: 220px ;
-    width: 220px ;
-    position: relative;
-}
 
-
-.Tarjeta {
+.st-Tarjeta {
     border-radius:50%;
     height:100%;
     width: 100%;
     position:absolute;
-    background-color: rgba(0 , 96 , 100 , 0.5)
-    transition: all 0.7s ;
+    background-color: rgba(0 , 96 , 100 , 0)
+    transition: background-color 1s  ease-in-out;
 }
 
-.Tarjeta:hover {
+.st-Tarjeta:hover {
+
    background-color: rgba(0 , 96 , 100 , 0.8)
 }
 
-.texto{
+.st-TarjetaOpacidad{
+    border-radius:50%;
     text-align:center;
     display:flex;
     flex-direction:column;
@@ -147,15 +150,14 @@
     height:100%;
 }
 
-.Tarjeta .texto{
+.st-Tarjeta .st-TarjetaOpacidad{
     position:absolute;
     margin:auto;
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
 
-
-.Tarjeta:hover .texto{
+.st-Tarjeta:hover .st-TarjetaOpacidad{
     opacity: 1;
 
 }

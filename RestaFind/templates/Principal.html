@@ -28,8 +28,8 @@
         <div class="EsquemaReferencias" id="referencias">
             <!---:style="{ 'background-image' : 'url(' + ref.image + ')' }" -->
             <div v-for="ref in consultores" class="EsquemaTarjeta" v-bind:style="{ 'background-image' : 'url(' + ref.image + ')' }">
-                <div class="Tarjeta">
-                    <div class="texto">
+                <div class="st-Tarjeta">
+                    <div class="st-TarjetaOpacidad">
                         <p class="st-TarjetaTitulo">{%raw%}{{ref.name}}{%endraw%}</p>
                         <p class="st-TarjetaContenido">{%raw%}{{ref.comentario}}{%endraw%}</p>
                     </div>
