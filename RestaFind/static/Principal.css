@@ -130,12 +130,12 @@
     height:100%;
     width: 100%;
     position:absolute;
-    background-color: rgba(0 , 255 , 255 , 0.5)
+    background-color: rgba(0 , 96 , 100 , 0.5)
     transition: all 0.7s ;
 }
 
 .Tarjeta:hover {
-   background-color: rgba(0 , 255 , 255 , 0.8)
+   background-color: rgba(0 , 96 , 100 , 0.8)
 }
 
 .texto{
@@ -163,7 +163,7 @@
 .st-TarjetaTitulo{
     font-family:HomemadeApple;
     font-size:30px;
-    color: white;
+    color: #bbdefb ;
     margin-bottom:8px;
 }
 
@@ -171,5 +171,5 @@
     font-family: LearningCurve;
     font-weight: bold;
     font-size:30px;
-    color: #006064;
+    color: white;
 }
