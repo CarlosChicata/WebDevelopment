@@ -11,3 +11,10 @@ chefmozcuisine.csv
 chefmozparking.csv
 chefmozhours4.csv
 rating_final.csv
+
+Datos a mostrar{
+    - nombre
+    - servicio y comida ( estrellas )
+    - horario y dias
+    - tipo de comida
+}

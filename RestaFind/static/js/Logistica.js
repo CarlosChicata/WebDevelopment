@@ -17,6 +17,15 @@ new Vue({
 new Vue({
     el:"#referencias",
     data:{
+        Respuestas:[
+            {
+                name:"ProtoFinda",
+                horarios: "L-V 11am-10pm",
+                comida:5,
+                servicio:5,
+                tipo:"peruana"
+            }
+        ],
         consultores:[
             {
                 name: "norman davies",
@@ -38,7 +47,10 @@ new Vue({
                 comentario:" i love that!!",
                 image:"/static/image/Face4.jpg"
              }
-        ]
+        ],
+        consulta: true
+
     }
 });
+
 
