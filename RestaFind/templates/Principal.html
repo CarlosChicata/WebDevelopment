@@ -14,46 +14,9 @@
         <!--- external template for vuejs components --->
 
     </head>
-    <body style="background:url(/static/image/BK8.jpeg);" >
-    <div class="EsquemaGeneral" id="referencias" >
-        <header>
-            <p class="st-Titulo EsquemaTitulo">RestaFind</p>
-            <p class="st-Subtitulo">find a good place for a good moments</p>
-        </header>
-        <form class="st-Buscador EsquemaBuscador" id="buscador">
-            <header class="st-TituloBuscador" >{%raw%}{{titulo}}{%endraw%}</header>
-            <input class="st-BuscadorTexto" type="text" name="description" v-model="descripcion"><br>
-            <input type="submit" class="st-BuscadorBoton" value="finding the restaurant">
-        </form>
-        <div class="EsquemaReferencias" >
-            <!---:style="{ 'background-image' : 'url(' + ref.image + ')' }" -->
-            <div v-for="ref in consultores" class="EsquemaTarjeta" v-bind:style="{ 'background-image' : 'url(' + ref.image + ')' }">
-                <div class="st-Tarjeta">
-                    <div class="st-TarjetaOpacidad">
-                        <p class="st-TarjetaTitulo">{%raw%}{{ref.name}}{%endraw%}</p>
-                        <p class="st-TarjetaContenido">{%raw%}{{ref.comentario}}{%endraw%}</p>
-                    </div>
-                </div>
-            </div>
+    <body >
+        <div class="sk-header">
+            <img src="/static/image/BN5.jpeg">
         </div>
-        <div v-if="consulta"  >
-            <div v-for="rpta in Respuestas">
-                <div class="flip-container">
-                    <div class="flipper">
-                        <div class="front" style="background:url('/static/image/22.jpg')">
-                        </div>
-                        <div class="back">
-                            <p>{%raw%}{{ rpta.name }}{%endraw%}</p>
-                            <p>{%raw%}{{ rpta.horarios }}{%endraw%}</p>
-                            <p>{%raw%}{{ rpta.comida }}{%endraw%}</p>
-                            <p>{%raw%}{{ rpta.servicio }}{%endraw%}</p>
-                            <p>{%raw%}{{ rpta.tipo }}{%endraw%}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<script src="/static/js/Logistica.js"></script>
     </body>
 </html>

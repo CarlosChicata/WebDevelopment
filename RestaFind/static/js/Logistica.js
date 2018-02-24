@@ -5,52 +5,5 @@
     pero escogimos esto por un motivos mas: aprendizaje sobre componentes en Vue.js
 **/
 
-new Vue({
-    el: '#buscador',
-    data:{
-        titulo:"tell me your place",
-        descripcion:''
-    }
-
-});
-
-new Vue({
-    el:"#referencias",
-    data:{
-        Respuestas:[
-            {
-                name:"ProtoFinda",
-                horarios: "L-V 11am-10pm",
-                comida:5,
-                servicio:5,
-                tipo:"peruana"
-            }
-        ],
-        consultores:[
-            {
-                name: "norman davies",
-                comentario:" i would use this app all time",
-                image:"/static/image/Face1.jpg"
-            },
-            {
-                name:"harold weasley",
-                comentario:" i recommended that all my friend and they like it!",
-                image:"/static/image/Face2.jpg"
-            },
-            {
-                name:"samantha gonzales",
-                comentario:"i feel so comfortable",
-                image:"/static/image/Face3.jpg"
-            },
-            {
-                name:"diana chicata",
-                comentario:" i love that!!",
-                image:"/static/image/Face4.jpg"
-             }
-        ],
-        consulta: true
-
-    }
-});
 
 

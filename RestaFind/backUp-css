@@ -1,138 +1,243 @@
-/*titulo*/
-.MarcoTitulo{
-    #background:#b3e5fc;
-    padding-top:45px;
-    padding-bottom:45px;
-    text-align:center;
+/**************************
+  Esta app es muestra de autoaprendizaje para poder demostrar habilidades de frontend developer para un trabajo en el futuro
+  creado por carlos Chicata
+  para el SPA ( single page application ) "RestaFind" que es un sistema de busqueda de restaurantes
+
+**************************/
+/* fuentes para el app*/
+@font-face{
+    font-family:MasterOfComicsPersonal;
+    src: url(MasterOfComicsPersonal.ttf);
+    font-weight:bold;
 }
 
-.Titulo{
-	font-family:MasterOfComicsPersonal;
-	font-size:75px;
-	#font-weight:lighter;
-	color:#ff3d00;
-	display:inline-block;
+@font-face{
+    font-family:LearningCurve;
+    src: url(LearningCurve.ttf);
+    font-weight:bold;
 }
 
-.Subtitulo{
-	font-family:LearningCurve;
-	font-size:35px;
-	font-weight:lighter;
-	color:#78909c;
-	margin-left:20px;
-	display:inline-block;
+@font-face{
+    font-family:SketchCollege;
+    src: url(SketchCollege.ttf);
+    font-weight:normal;
 }
 
-/*Marco de consulta*/
-.MarcoConsulta{
-    text-align:center;
-    padding-right:25%;
-    padding-left:25%;
+@font-face{
+    font-family:HomemadeApple;
+    src: url(HomemadeApple.ttf);
+    font-weight:bold;
 }
 
-.AreaConsulta{
-    height:150px;
-    min-height:150px;
-    max-height:300px;
-    width: 90% auto;
-    margin-top:20px;
-    padding:5px;
-    border-radius:15px;
-    display: block;
-    resize:vertical;
-    background-color:white;
+@font-face{
+    font-family:Tiza;
+    src: url(tiza.ttf);
+    font-weight:bold;
+}
+/* animaciones  */
+@keyframes FadeInUp{
+    from{
+        opacity: 0 ;
+        transform: translate3d( 0 , 100% , 0 );
+    }
+    to{
+        opacity: 1 ;
+        transform: translate3d( 0 , 0 , 0 );
+    }
 }
 
-.AreaBoton{
-    margin-top:5px;
-    width:100%;
-}
-
-/*Marco de presentacion de data*/
-
-.MarcoRestaurant{
-    #width:80% auto;
-    background-color:white;
-    margin-top:10px;
-    padding-top:5px;
-    padding-right:25%;
-    padding-left:25%;
-}
-
-.DatosRestaurant{
-    display:inline-block;
-}
-
-/****************/
-/* area de eslogan*/
-.MarcoLogan{
-   padding-left: 2%;
-   padding-right:5%;
-   display:inline-block;
-}
-
-img{
-    height:240px;
-    width:320px;
-    border:25px white;
-}
-
-/////////////////////////////////////////////
-        <div class="MarcoLogan">
-            <div class="Foto">
-                <img src="/static/image/postre.jpg">
-            </div>
-            <div class="Foto">
-                <img src="/static/image/sopa.jpg">
-            </div>
-            <div class="Foto">
-                <img src="/static/image/comida.jpg">
-            </div>
-        </div>
-        <header class="AreaTitulo">
-            <div class="conte">
-                 <p class="Titulo">RestaFind</p>
-            </div>
-        </header>
-
-        /** titulo **/
-.MarcoLogan{
+/* css - grid and space */
+.EsquemaGeneral{
     display: flex;
-    justify-content:center;
-    position:;fixed
+    flex-direction: column;
+    align-items:center;
 }
 
-.Foto > img{
-    height:300px;
-    width: 400px;
-    border:12px solid white;
-    border-bottom:26px solid white;
-    margin:5px;
-    box-shadow: 2px 2px 5px;
+.EsquemaBuscador{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:10px;
+
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.AreaTitulo{
-    height:120px;
-    width:60% auto;
-    text-align:center;
-    background-color:white;
-    margin-right:15%;
-    margin-left:15%;
-    border-radius:10px;
+.EsquemaTitulo{
+
+    padding-top:40px;
+}
+
+.EsquemaReferencias{
+    display: flex;
+    flex-wrap: wrap;
+    align-self:center;
+    justify-content: space-around;
+    width:80%;
+    margin-top:10px;
+}
+
+.EsquemaTarjeta{
+    margin:2px;
+    background-size: cover;
+    border-radius:50%;
+    border: 2px outset white;
+    height: 220px ;
+    width: 220px ;
     position: relative;
-    top:-50px;
 }
 
-.Titulo{
+
+/******************* css - style - size ********************/
+/* titulo area */
+.st-Titulo{
+    text-align:center;
     font-family:MasterOfComicsPersonal;
    	font-size:75px;
 	color:#ff3d00;
+	text-shadow: 1px 2px black;
 }
 
-.Subtitulo{
+.st-Subtitulo{
+    text-align:center;
 	font-family:LearningCurve;
-	font-size:35px;
+	font-size:50px;
 	font-weight:lighter;
-	color:#78909c;
-	display:inline-block;
+	color:#bdbdbd;
+}
+
+/* Buscador area  */
+.st-Buscador {
+    min-width: 65%;
+    max-width:70%;
+    height:120px;
+    border-radius:5px;
+}
+
+.st-TituloBuscador{
+    font-family:SketchCollege;
+    font-size:40px;
+    text-align:center;
+    color:white;
+}
+
+.st-BuscadorTexto{
+
+    width:85%;
+}
+
+.st-BuscadorBoton{
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    font-family:SketchCollege;
+    font-size:20px;
+}
+
+.st-BuscadorBoton:hover{
+    background-color:rgba(0,0,0,0.6);
+    opacity:1;
+    transition: all 0.5s ease;
+}
+
+/* referencias area */
+
+.st-Tarjeta {
+    border-radius:50%;
+    height:100%;
+    width: 100%;
+    position:absolute;
+    background-color: rgba(0 , 96 , 100 , 0)
+    transition: background-color 1s  ease-in-out;
+}
+
+.st-Tarjeta:hover {
+
+   background-color: rgba(0 , 96 , 100 , 0.8)
+}
+
+.st-TarjetaOpacidad{
+    border-radius:50%;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+
+.st-Tarjeta .st-TarjetaOpacidad{
+    position:absolute;
+    margin:auto;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.st-Tarjeta:hover .st-TarjetaOpacidad{
+    opacity: 1;
+
+}
+
+.st-TarjetaTitulo{
+    font-family:HomemadeApple;
+    font-size:30px;
+    color: #bbdefb ;
+    margin-bottom:8px;
+}
+
+.st-TarjetaContenido{
+    font-family: LearningCurve;
+    font-weight: bold;
+    font-size:30px;
+    color: white;
+}
+
+/* consulta area */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 220px;
+	height: 220px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    background-size:cover;
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
 }

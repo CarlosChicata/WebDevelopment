@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" author="Carlos F. Chicata Farfán">
+        <meta name="Goals of app" content="this is a recommendation system with QA system to find restaurants for the users according his need">
+        <meta name="Purpose Personal" content="A SPA to show my skills in webtech">
+        <meta name="Full Stack" content="Front-end: Vue,js, bootstrap, html5, js, css3. Backend: Flask, python. Data: Kaggle dataset">
+        <title> RestaFind: to find good places for good moments</title>
+        <!--- those are external files will use--->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='reset.css')}}">
+        <link rel="stylesheet" type="text/css" href="/static/Principal.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+        <!--- external template for vuejs components --->
+
+    </head>
+    <body style="background:url(/static/image/BK8N.png);" >
+    <div class="EsquemaGeneral" id="referencias" >
+        <header>
+            <p class="st-Titulo EsquemaTitulo">RestaFind</p>
+            <p class="st-Subtitulo">find a good place for a good moments</p>
+        </header>
+        <form class="st-Buscador EsquemaBuscador" id="buscador">
+            <header class="st-TituloBuscador" >{%raw%}{{titulo}}{%endraw%}</header>
+            <input class="st-BuscadorTexto" type="text" name="description" v-model="descripcion"><br>
+            <input type="submit" class="st-BuscadorBoton" value="finding the restaurant">
+        </form>
+        <div class="EsquemaReferencias" >
+            <!---:style="{ 'background-image' : 'url(' + ref.image + ')' }" -->
+            <div v-for="ref in consultores" class="EsquemaTarjeta" v-bind:style="{ 'background-image' : 'url(' + ref.image + ')' }">
+                <div class="st-Tarjeta">
+                    <div class="st-TarjetaOpacidad">
+                        <p class="st-TarjetaTitulo">{%raw%}{{ref.name}}{%endraw%}</p>
+                        <p class="st-TarjetaContenido">{%raw%}{{ref.comentario}}{%endraw%}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-if="consulta"  >
+            <div v-for="rpta in Respuestas">
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front" style="background:url('/static/image/22.jpg')">
+                        </div>
+                        <div class="back">
+                            <p>{%raw%}{{ rpta.name }}{%endraw%}</p>
+                            <p>{%raw%}{{ rpta.horarios }}{%endraw%}</p>
+                            <p>{%raw%}{{ rpta.comida }}{%endraw%}</p>
+                            <p>{%raw%}{{ rpta.servicio }}{%endraw%}</p>
+                            <p>{%raw%}{{ rpta.tipo }}{%endraw%}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/static/js/Logistica.js"></script>
+    </body>
+</html>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
