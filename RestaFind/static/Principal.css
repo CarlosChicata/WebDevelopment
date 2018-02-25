@@ -20,8 +20,8 @@
 }
 
 @font-face{
-    font-family:LearningCurve;
-    src: url(LearningCurve.ttf);
+    font-family:BackToBlack;
+    src: url(BackToBlack.ttf);
     font-weight:bold;
 }
 
@@ -73,7 +73,7 @@
     position: absolute;
     height:100%;
     width:100%;
-    filter:brightness(75%);
+    filter:brightness(40%);
     #filter: blur( 1px );
     object-fit:cover;
     transform: scale(1.1);
@@ -123,6 +123,7 @@
 }
 
 .sk-BuscadorHeader input[ type='text']{
+
     height:20px;
 }
 
@@ -136,22 +137,28 @@
 
 /**** css - estilo ****/
 
+:root{
+    --ColorSubtituloHeader: none;
+    --ColorTituloHeader: #474343;
+}
+
 .st-TituloHeader{
     font-family:MasterOfComicsPersonal;
     #color:red;
     font-size:6em;
-    #text-shadow: 1px 0px 1px black,  -1px 0px 1px black, 0px -1px 1px black, 0px 1px 1px black;
-    color:#ff3d00;
+    color: red;
 	text-shadow: 1px 2px black;
+	#text-shadow: 1px 0px 1px var(--ColorTituloHeader),  -1px 0px 1px var(--ColorTituloHeader), 0px -1px 1px var(--ColorTituloHeader), 0px 1px 1px var(--ColorTituloHeader);
 }
 
 .st-SubtituloHeader{
     text-align:center;
-	font-family:LearningCurve;
-	font-size:50px;
+	font-family: BackToBlack;
+	font-size:35px;
 	font-weight:lighter;
-	color:#bdbdbd;
-	text-shadow: 1px 0px 1px black,  -1px 0px 1px black, 0px -1px 1px black, 0px 1px 1px black;
+	color: #24a2a2;
+	text-shadow: 1px 0px 1px var(--ColorSubtituloHeader),  -1px 0px 1px var(--ColorSubtituloHeader), 0px -1px 1px var(--ColorSubtituloHeader), 0px 1px 1px var(--ColorSubtituloHeader);
+    #text-shadow: 2px 3px 2px var(--ColorSubtituloHeader) ;
 }
 
 .st-BotonHeader{
@@ -180,6 +187,7 @@
 }
 
 .st-BotonSubmitHeader{
+    text-shadow: 2px 2px 1px black;
     background-color: red;
     color:white;
     border: 2px solid red;
