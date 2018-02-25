@@ -10,13 +10,24 @@
         <!--- those are external files will use--->
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='reset.css')}}">
         <link rel="stylesheet" type="text/css" href="/static/Principal.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
         <!--- external template for vuejs components --->
 
     </head>
     <body >
         <div class="sk-header">
             <img src="/static/image/BN5.jpeg">
+            <div class="sk-SubHeader">
+                <div class="sk-BotonHeader">
+                    <button class="st-BotonHeader"> Login </button>
+                    <button class="sk-BotonDecoracionHeader st-BotonHeader st-SingUpHeader"> Sign Up</button>
+                </div>
+                <p class="st-TituloHeader sk-TituloHeader">Restafind </p>
+                <p class="st-SubtituloHeader sk-SubtituloHeader">finding a good moments</p>
+                <form class="sk-BuscadorHeader">
+                    <input class="sk-InputHeader" type="text" placeholder="find your moment!">
+                    <button type="submit" class="sk-BotonDecoracionHeader st-BotonSubmitHeader"> search </button>
+                </form>
+            </div>
         </div>
     </body>
 </html>

@@ -42,6 +42,12 @@
     src: url(tiza.ttf);
     font-weight:bold;
 }
+
+@font-face{
+    font-family:Lobster;
+    src: url(Lobster.otf);
+    font-weight:bold;
+}
 /* css - animaciones  */
 @keyframes FadeInUp{
     from{
@@ -60,19 +66,124 @@
 .sk-header{
     height:400px;
     width:100%;
-    position: relative
+    position: relative;
 }
 
 .sk-header img{
     position: absolute;
     height:100%;
     width:100%;
-    filter:brightness(85%);
+    filter:brightness(75%);
     #filter: blur( 1px );
     object-fit:cover;
     transform: scale(1.1);
     background-color:rgba(0,100,100,0);
 }
 
+.sk-SubHeader{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sk-TituloHeader{
+    margin-top:75px;
+    margin-bottom:3px;
+}
+
+.sk-SubtituloHeader{
+
+    margin-bottom:80px;
+}
+
+.sk-InputHeader{
+    width:70%;
+    min-width:400px;
+    max-width:900px;
+}
+
+.sk-InputHeader::-moz-placeholder{
+    font-family: Lobster;
+
+}
+
+.sk-BotonDecoracionHeader{
+
+    padding:4px;
+}
+
+.sk-BuscadorHeader{
+    width: 100%;
+    height:40px;
+    text-align:center;
+}
+
+.sk-BotonHeader{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    margin-right:5%;
+}
 
 /**** css - estilo ****/
+
+.st-TituloHeader{
+    font-family:MasterOfComicsPersonal;
+    #color:red;
+    font-size:6em;
+    #text-shadow: 1px 0px 1px black,  -1px 0px 1px black, 0px -1px 1px black, 0px 1px 1px black;
+    color:#ff3d00;
+	text-shadow: 1px 2px black;
+}
+
+.st-SubtituloHeader{
+    text-align:center;
+	font-family:LearningCurve;
+	font-size:50px;
+	font-weight:lighter;
+	color:#bdbdbd;
+	text-shadow: 1px 0px 1px black,  -1px 0px 1px black, 0px -1px 1px black, 0px 1px 1px black;
+}
+
+.st-BotonHeader{
+    margin-left:3px;
+    margin-right:3px;
+    background-color: Transparent;
+    border: none;
+    color: white;
+    font-size:16px;
+    font-family: Lobster;
+}
+
+.st-BotonHeader:hover{
+
+    color: #ffeb3b;
+}
+
+.st-SingUpHeader{
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.st-SingUpHeader:hover{
+
+    border-color: #ffeb3b;
+}
+
+.st-BotonSubmitHeader{
+    background-color: red;
+    color:white;
+    border: 2px solid red;
+    border-radius:4px;
+    font-family:Lobster;
+}
+
+.st-BotonSubmitHeader:hover{
+
+    color: #ffeb3b;
+}
