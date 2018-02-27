@@ -116,17 +116,6 @@
     padding:4px;
 }
 
-.sk-BuscadorHeader{
-    width: 100%;
-    height:40px;
-    text-align:center;
-}
-
-.sk-BuscadorHeader input[ type='text']{
-
-    height:20px;
-}
-
 .sk-BotonHeader{
     width:100%;
     display: flex;
@@ -135,11 +124,23 @@
     margin-right:5%;
 }
 
+
+.sk-BuscadorHeader{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 /**** css - estilo ****/
 
 :root{
     --ColorSubtituloHeader: none;
     --ColorTituloHeader: #474343;
+}
+
+body{
+    background-color:#fafafa;
 }
 
 .st-TituloHeader{
@@ -199,3 +200,5 @@
 
     color: #ffeb3b;
 }
+
+/* reference area ? */

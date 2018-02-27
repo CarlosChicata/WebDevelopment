@@ -10,8 +10,11 @@
         <!--- those are external files will use--->
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='reset.css')}}">
         <link rel="stylesheet" type="text/css" href="/static/Principal.css">
-        <!--- external template for vuejs components --->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+        <!---
+         <input class="sk-InputHeader" type="text" placeholder="say the name of restaurant or type of kitchens in the city you want">
 
+         external template for vuejs components --->
     </head>
     <body >
         <div class="sk-header">
@@ -24,10 +27,22 @@
                 <p class="st-TituloHeader sk-TituloHeader">Restafind </p>
                 <p class="st-SubtituloHeader sk-SubtituloHeader">finding for place by good moments</p>
                 <form class="sk-BuscadorHeader">
-                    <input class="sk-InputHeader" type="text" placeholder="find your moment!">
+                    <div id="Opciones">
+                        <input list="OptionCity" >
+                        <datalist id="OptionCity" >
+                            <option v-for="city in City" :value="city.text" >{%raw%}{{city.text}}{%endraw%}</option>
+                        </datalist>
+                        <select>
+                            <option v-for="kitchen in Kitchen" :value="kitchen.text">{%raw%}{{kitchen.text}}{%endraw%}</option>
+                        </select>
+                    </div>
                     <button type="submit" class="sk-BotonDecoracionHeader st-BotonSubmitHeader"> search </button>
                 </form>
             </div>
         </div>
+        <div class="sk-reference">
+
+        </div>
+    <script src="/static/js/Logistica.js"></script>
     </body>
 </html>
