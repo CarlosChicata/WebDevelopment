@@ -48,6 +48,7 @@
     src: url(Lobster.otf);
     font-weight:bold;
 }
+
 /* css - animaciones  */
 @keyframes FadeInUp{
     from{
@@ -60,8 +61,28 @@
     }
 }
 
+/****** usando variables css para poder maquetar la información ******/
+:root{
+/** area de header**/
+    --ColorSubtituloHeader: none;
+    --ColorTituloHeader: #474343;
+    --FontSizeTituloHeader:6;
+    --FontSizeSubtituloHeader: 35;
+    --FlexDirectionBuscadorHeader: row;
+}
+
+/***** responsive web design/ media queries ****/
+@media screen and (max-width: 620px ){
+    :root{
+        --FontSizeTituloHeader:4;
+        --FontSizeSubtituloHeader: 27;
+        --FlexDirectionBuscadorHeader: column;
+     }
+}
+
+
 /**** css - diseño ****/
-/** encabezado **/
+/** area de header **/
 
 .sk-header{
     height:400px;
@@ -100,11 +121,6 @@
     margin-bottom:80px;
 }
 
-.sk-BotonDecoracionHeader{
-
-    padding:0px;
-}
-
 .sk-BotonHeader{
     width:100%;
     display: flex;
@@ -116,23 +132,22 @@
 .sk-BuscadorHeader{
     width: 70%;
     max-width:1220px;
-    height:40px;
+    height:35px;
     display: flex;
-    flex-direction: row;
+    flex-direction: var(--FlexDirectionBuscadorHeader);
     justify-content: center;
 }
 
-.sk-ComponentHeader{
-
-    height: 40px ;
+.sk-ComponenteBuscadorHeader{
+    -moz-box-sizing: border-box;
+    max-width:300px;
+    min-width:150px;
+    width:250px;
+    margin-right: 5px;
 }
 
 /**** css - estilo ****/
-
-:root{
-    --ColorSubtituloHeader: none;
-    --ColorTituloHeader: #474343;
-}
+/** area de header**/
 
 body{
     background-color:#fafafa;
@@ -140,21 +155,19 @@ body{
 
 .st-TituloHeader{
     font-family:MasterOfComicsPersonal;
-    #color:red;
-    font-size:6em;
+    font-size: calc( var(--FontSizeTituloHeader)*1em );
     color: red;
 	text-shadow: 1px 2px black;
-	#text-shadow: 1px 0px 1px var(--ColorTituloHeader),  -1px 0px 1px var(--ColorTituloHeader), 0px -1px 1px var(--ColorTituloHeader), 0px 1px 1px var(--ColorTituloHeader);
 }
 
 .st-SubtituloHeader{
     text-align:center;
 	font-family: BackToBlack;
-	font-size:35px;
+	font-size: calc( var(--FontSizeSubtituloHeader)*1px );
 	font-weight:lighter;
 	color: #24a2a2;
 	text-shadow: 1px 0px 1px var(--ColorSubtituloHeader),  -1px 0px 1px var(--ColorSubtituloHeader), 0px -1px 1px var(--ColorSubtituloHeader), 0px 1px 1px var(--ColorSubtituloHeader);
-    #text-shadow: 2px 3px 2px var(--ColorSubtituloHeader) ;
+
 }
 
 .st-BotonHeader{

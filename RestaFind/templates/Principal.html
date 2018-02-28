@@ -27,14 +27,14 @@
                 <p class="st-TituloHeader sk-TituloHeader">Restafind </p>
                 <p class="st-SubtituloHeader sk-SubtituloHeader">finding for place by good moments</p>
                 <form class="sk-BuscadorHeader" id="Opciones">
-                    <input list="OpcionesBusqueda">
+                    <input class="sk-ComponenteBuscadorHeader" list="OpcionesBusqueda">
                     <datalist id="OpcionesBusqueda">
                         <option v-for="city in City" :value="city.text"> {%raw%}{{ city.text}}{%endraw%}</option>
                     </datalist>
-                    <select>
+                    <select class="sk-ComponenteBuscadorHeader">
                         <option v-for="kitchen in Kitchen" :value="kitchen.text"> {%raw%}{{kitchen.text}}{%endraw%}</option>
                     </select>
-                    <button type="submit" class="sk-BotonDecoracionHeader st-BotonSubmitHeader"> search </button>
+                    <button type="submit" class="st-BotonSubmitHeader"> search </button>
                 </form>
             </div>
         </div>
