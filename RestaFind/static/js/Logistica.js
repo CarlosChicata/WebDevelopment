@@ -28,3 +28,18 @@ var app1 = new Vue({
     }
 })
 
+var app2 = new Vue({
+    el:"#Lenguaje",
+    data:{
+        Identificador : 1
+    },
+    methods:{
+        CambioLenguaje: function( idx ){
+            var hijos = this.$el.getElementsByClassName("st-BotonHeader")
+            hijos[ this.Identificador ].classList.remove("st-BotonDecoretionHeader")
+            hijos[ idx ].classList.add("st-BotonDecoretionHeader")
+            this.Identificador = idx
+        }
+    }
+})
+

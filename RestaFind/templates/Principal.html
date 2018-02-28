@@ -20,28 +20,23 @@
         <div class="sk-header">
             <img src="/static/image/BN5.jpeg">
             <div class="sk-SubHeader">
-                <div class="sk-BotonHeader">
-                    <button class="st-BotonHeader"> Login </button>
-                    <button class="sk-BotonDecoracionHeader st-BotonHeader st-SingUpHeader"> Sign Up</button>
+                <div class="sk-BotonHeader" id="Lenguaje">
+                    <button v-on:click="CambioLenguaje(0)" class="st-BotonHeader"> Español </button>
+                    <button v-on:click="CambioLenguaje(1)" class="st-BotonHeader st-BotonDecoretionHeader"> English </button>
                 </div>
                 <p class="st-TituloHeader sk-TituloHeader">Restafind </p>
                 <p class="st-SubtituloHeader sk-SubtituloHeader">finding for place by good moments</p>
-                <form class="sk-BuscadorHeader">
-                    <div id="Opciones">
-                        <input list="OptionCity" >
-                        <datalist id="OptionCity" >
-                            <option v-for="city in City" :value="city.text" >{%raw%}{{city.text}}{%endraw%}</option>
-                        </datalist>
-                        <select>
-                            <option v-for="kitchen in Kitchen" :value="kitchen.text">{%raw%}{{kitchen.text}}{%endraw%}</option>
-                        </select>
-                    </div>
+                <form class="sk-BuscadorHeader" id="Opciones">
+                    <input list="OpcionesBusqueda">
+                    <datalist id="OpcionesBusqueda">
+                        <option v-for="city in City" :value="city.text"> {%raw%}{{ city.text}}{%endraw%}</option>
+                    </datalist>
+                    <select>
+                        <option v-for="kitchen in Kitchen" :value="kitchen.text"> {%raw%}{{kitchen.text}}{%endraw%}</option>
+                    </select>
                     <button type="submit" class="sk-BotonDecoracionHeader st-BotonSubmitHeader"> search </button>
                 </form>
             </div>
-        </div>
-        <div class="sk-reference">
-
         </div>
     <script src="/static/js/Logistica.js"></script>
     </body>
