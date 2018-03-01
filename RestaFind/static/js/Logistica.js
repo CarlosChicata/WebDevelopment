@@ -5,6 +5,7 @@
     pero escogimos esto por un motivos mas: aprendizaje sobre componentes en Vue.js
 **/
 
+/// maneja todo sobre la informacion del a nivel busqueda
 var app1 = new Vue({
     el:"#Opciones",
     data:{
@@ -28,6 +29,7 @@ var app1 = new Vue({
     }
 })
 
+/// maneja la gestion del idioma del app
 var app2 = new Vue({
     el:"#Lenguaje",
     data:{
@@ -43,3 +45,33 @@ var app2 = new Vue({
     }
 })
 
+var app3 = new Vue({
+    el:"#Referencias",
+    data:{
+        Gatronomia:[
+            {
+                titulo:"La causa limeña",
+                conocimiento:"nacido en el Perú pre-independentista, que buscando dinero para poder pagar los gastos de la guerra inventan este platillo.",
+                imagen:"/static/image/CausaRellena.jpg"
+            },
+            {
+                titulo:"El anticucho de corazón de vaca",
+                conocimiento:"nace en el Perú antiguo que al tener los intestinos de las  vacas, los africanos recidentes inventan esto para comer.",
+                imagen:"/static/image/Anticuchos.jpg"
+            },
+            {
+                titulo:"El suspiro a la limeña",
+                conocimiento:"este es un postre encargado de dar sabor a la cocina peruana proveiente de lima, que por su sabor es muy conocido en el pais.",
+                imagen:"/static/image/SuspiroLimeno.jpg"
+            }
+        ]
+    }
+
+})
+
+$( function(){
+    $(".bxslider").bxSlider({
+        mode: 'fade',
+        captions: true,
+    });
+});

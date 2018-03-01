@@ -8,9 +8,9 @@
         <meta name="Full Stack" content="Front-end: Vue,js, bootstrap, html5, js, css3. Backend: Flask, python. Data: Kaggle dataset">
         <title> RestaFind: to find good places for good moments</title>
         <!--- those are external files will use--->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='reset.css')}}">
         <link rel="stylesheet" type="text/css" href="/static/Principal.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
         <!---
          <input class="sk-InputHeader" type="text" placeholder="say the name of restaurant or type of kitchens in the city you want">
 
@@ -38,6 +38,19 @@
                 </form>
             </div>
         </div>
+        <div class="sk-references" id="Referencias">
+            <div class="bxslider">
+                <div v-for="info in Gatronomia">
+                    <img :src="info.imagen">
+                    <p>{%raw%}{{info.titulo}}{%endraw%}</p>
+                    <p>{%raw%}{{info.conocimiento}}{%endraw%}</p>
+                </div>
+            </div>
+            
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="/static/js/Logistica.js"></script>
     </body>
 </html>
