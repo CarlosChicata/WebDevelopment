@@ -61,6 +61,24 @@
     }
 }
 
+@keyframes heartbeat {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /****** usando variables css para poder maquetar la información ******/
 :root{
 /** area de header**/
@@ -145,11 +163,22 @@
     width:250px;
     margin-right: 5px;
 }
-/* area de referencia*/
+
+/*  area de referenceias */
+
+.sk-references{
+    height:320px;
+    display:static;
+}
 .sk-references img{
-    height:400px;
-    width:450px;
+    height: 220px;
+    width:200px;
     object-fit:cover;
+}
+
+.sk-references .sk-SingleReference{
+    display: flex;
+    align-items:center;
 }
 
 
@@ -216,4 +245,8 @@ body{
     color: #ffeb3b;
 }
 
-/* reference area ? */
+/* area de referencias  */
+
+.st-MarcoPrincipalReference{
+
+}

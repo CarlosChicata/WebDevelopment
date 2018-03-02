@@ -48,19 +48,22 @@ var app2 = new Vue({
 var app3 = new Vue({
     el:"#Referencias",
     data:{
-        Gatronomia:[
+        Gastronomia:[
             {
                 titulo:"La causa limeña",
+                origen:"lima , lima",
                 conocimiento:"nacido en el Perú pre-independentista, que buscando dinero para poder pagar los gastos de la guerra inventan este platillo.",
                 imagen:"/static/image/CausaRellena.jpg"
             },
             {
                 titulo:"El anticucho de corazón de vaca",
+                origen:"lima , lima",
                 conocimiento:"nace en el Perú antiguo que al tener los intestinos de las  vacas, los africanos recidentes inventan esto para comer.",
                 imagen:"/static/image/Anticuchos.jpg"
             },
             {
                 titulo:"El suspiro a la limeña",
+                origen:"lima , lima",
                 conocimiento:"este es un postre encargado de dar sabor a la cocina peruana proveiente de lima, que por su sabor es muy conocido en el pais.",
                 imagen:"/static/image/SuspiroLimeno.jpg"
             }
@@ -69,9 +72,6 @@ var app3 = new Vue({
 
 })
 
-$( function(){
-    $(".bxslider").bxSlider({
-        mode: 'fade',
-        captions: true,
-    });
-});
+//// area de referencias
+
+
