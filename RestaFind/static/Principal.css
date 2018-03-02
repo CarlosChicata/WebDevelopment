@@ -172,11 +172,11 @@
 .sk-TituloReferences{
     text-align:center;
     margin-bottom:15px;
+    margin-top: 35px;
 }
 
 .sk-ContainerSingleReferences{
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
     height:100%;
@@ -194,18 +194,35 @@
 
 .sk-ImageReferences{
     height:200px;
-    width:180px;
+    width:200px;
     object-fit: cover ;
     border-radius: 15px 0px 0px 15px;
 }
 
 .sk-TextReferences{
+    padding:2px;
     height:200px;
     width: 400px;
     position: relative ;
     border-radius: 0px 0px , 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
 }
 
+.sk-TextReferences > p{
+    text-align:center;
+}
+
+.bx-wrapper, .bx-viewport {
+
+    height: 270px !important;
+}
+
+.sk-AlignTextoReferences{
+    margin-top:0px;
+}
 
 /**** css - estilo ****/
 /** area de header**/
@@ -280,5 +297,19 @@ body{
 }
 
 .st-SingleReferences{
-    box-shadow: 2px 2px 3px black,2px -2px 3px black,-2px 2px 3px black,-2px -2px 3px black
+    background-color: #fff;
+    #box-shadow: 0px 10px 10px -10px rgba(161,156,161,1), 0px -10px 10px -10px rgba(161 , 156 , 161 ,1);
+    box-shadow: 0px 6px 10px 1px rgba(0,0,0,1), 0px -2px 3px -18px rgba(0 , 0, 0 ,1);
+}
+
+.bx-wrapper{
+
+    background: linear-gradient(to right, #36d1dc, #5b86e5)
+}
+
+.st-TextoTituloReferences{
+    font-family: BackToBlack;
+    font-size:2rem;
+    color:rgb(255,0,0);
+    text-shadow:0px 1px black;
 }

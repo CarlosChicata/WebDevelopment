@@ -45,7 +45,7 @@
                     <div class="sk-SingleReferences st-SingleReferences">
                         <img class="sk-ImageReferences" v-bind:src="info.imagen">
                         <div class="sk-TextReferences">
-                            <p>{%raw%}{{info.titulo}}{%endraw%}</p>
+                            <p class="st-TextoTituloReferences sk-AlignTextoReferences">{%raw%}{{info.titulo}}{%endraw%}</p>
                             <p>{%raw%}{{info.origen}}{%endraw%}</p>
                             <p>{%raw%}{{info.conocimiento}}{%endraw%}</p>
                         </div>
@@ -63,7 +63,8 @@
   $('.bxslider').bxSlider({
     auto:true,
     pause:5000,
-    controls:false
+    controls:false,
+    adaptiveHeight:true
   });
 });
     </script>
