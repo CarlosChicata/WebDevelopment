@@ -74,4 +74,3 @@ var app3 = new Vue({
 
 //// area de referencias
 
-
