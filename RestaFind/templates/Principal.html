@@ -9,12 +9,20 @@
         <title> RestaFind: to find good places for good moments</title>
         <!--- those are external files will use--->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='reset.css')}}">
         <link rel="stylesheet" type="text/css" href="/static/Principal.css">
         <!---
          <input class="sk-InputHeader" type="text" placeholder="say the name of restaurant or type of kitchens in the city you want">
 
          external template for vuejs components --->
+        <style>
+.sk-TextReferences > p:not( :first-child ){
+    font-family: "Arbutus Slab";
+    font-size: 13px;
+    font-Weight:500;
+}
+        </style>
     </head>
     <body >
         <div class="sk-header">
@@ -45,9 +53,9 @@
                     <div class="sk-SingleReferences st-SingleReferences">
                         <img class="sk-ImageReferences" v-bind:src="info.imagen">
                         <div class="sk-TextReferences">
-                            <p class="st-TextoTituloReferences sk-AlignTextoReferences">{%raw%}{{info.titulo}}{%endraw%}</p>
-                            <p>{%raw%}{{info.origen}}{%endraw%}</p>
-                            <p>{%raw%}{{info.conocimiento}}{%endraw%}</p>
+                            <p class="st-TextoTituloReferences">{%raw%}{{info.titulo}}{%endraw%}</p>
+                            <p class="st-Proto" >{%raw%}{{info.origen}}{%endraw%}</p>
+                            <p class="st-Proto" >{%raw%}{{info.conocimiento}}{%endraw%}</p>
                         </div>
                     </div>
                 </div>

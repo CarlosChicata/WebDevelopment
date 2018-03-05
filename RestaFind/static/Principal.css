@@ -26,27 +26,22 @@
 }
 
 @font-face{
-    font-family:SketchCollege;
-    src: url(SketchCollege.ttf);
-    font-weight:normal;
-}
-
-@font-face{
-    font-family:HomemadeApple;
-    src: url(HomemadeApple.ttf);
+    font-family: LearningCurve;
+    src: url(LearningCurve.ttf);
     font-weight:bold;
 }
 
-@font-face{
-    font-family:Tiza;
-    src: url(tiza.ttf);
-    font-weight:bold;
-}
 
 @font-face{
     font-family:Lobster;
     src: url(Lobster.otf);
     font-weight:bold;
+}
+
+@font-face{
+    font-family:Proto;
+    src : url();
+    font-weight: bold;
 }
 
 /* css - animaciones  */
@@ -200,19 +195,18 @@
 }
 
 .sk-TextReferences{
-    padding:2px;
     height:200px;
     width: 400px;
     position: relative ;
-    border-radius: 0px 0px , 15px 15px;
     display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content:center;
+    align-items: left;
+    padding-left: 11px;
+    padding-top:11px;
 }
 
-.sk-TextReferences > p{
-    text-align:center;
+.sk-TextReferences > p:not(:last-child){
+    margin-bottom:10px;
 }
 
 .bx-wrapper, .bx-viewport {
@@ -220,9 +214,6 @@
     height: 270px !important;
 }
 
-.sk-AlignTextoReferences{
-    margin-top:0px;
-}
 
 /**** css - estilo ****/
 /** area de header**/
@@ -302,6 +293,7 @@ body{
     box-shadow: 0px 6px 10px 1px rgba(0,0,0,1), 0px -2px 3px -18px rgba(0 , 0, 0 ,1);
 }
 
+
 .bx-wrapper{
 
     background: linear-gradient(to right, #36d1dc, #5b86e5)
@@ -311,5 +303,6 @@ body{
     font-family: BackToBlack;
     font-size:2rem;
     color:rgb(255,0,0);
-    text-shadow:0px 1px black;
+    text-shadow: 1px 1px black;
 }
+
