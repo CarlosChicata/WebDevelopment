@@ -82,6 +82,15 @@
     --FontSizeTituloHeader:6;
     --FontSizeSubtituloHeader: 35;
     --FlexDirectionBuscadorHeader: row;
+
+    --HeightBxSlider: 270;
+    --WidthImageReferences:200;
+    --DirectionSingleReferences:row;
+    --HeightSingleReferences:200;
+    --WidthSingleReferences: 500 ;
+    --WidthTextReferences:400;
+    --BorderRadiusImageReferences: 15px 0px 0px 15px;
+    --DisplaySingleReferences: flex ;
 }
 
 /***** responsive web design/ media queries ****/
@@ -90,6 +99,16 @@
         --FontSizeTituloHeader:4;
         --FontSizeSubtituloHeader: 27;
         --FlexDirectionBuscadorHeader: column;
+
+        --HeightBxSlider:500;
+        --WidthImageReferences:350;
+        --DisplaySingleReferences:inline-block;
+        --DirectionSingleReferences: column;
+        --HeightSingleReferences: 420 ;
+        --WidthtSingleReferences: 350 ;
+        --WidthTextReferences:350;
+        --BorderRadiusImageReferences: 15px 15px 0px 0px;
+
      }
 }
 
@@ -160,7 +179,7 @@
 /*  area de referenceias */
 
 .sk-references{
-    height:350px;
+    height: calc( var( --HeightReferences ) * 1px );
     width:100%;
 }
 
@@ -180,28 +199,29 @@
 }
 
 .sk-SingleReferences{
-    display:flex;
+    display: var(--DisplaySingleReferences);
+    flex-direction: var(--DirectionSingleReferences);
     justify-content:center;
-    height:200px;
-    width:500px;
+    height: calc( var( --HeightSingleReferences ) * 1px);
+    width: calc( var( --WidthtSingleReferences ) * 1px );
     border-radius:15px;
 }
 
 .sk-ImageReferences{
     height:200px;
-    width:200px;
+    width: calc( var(--WidthImageReferences)*1px);
     object-fit: cover ;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: var(--BorderRadiusImageReferences );
 }
 
 .sk-TextReferences{
     height:200px;
-    width: 400px;
+    width: calc( var( --WidthTextReferences ) * 1px );
     position: relative ;
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding-left: 11px;
+    margin-left: 11px;
     padding-top:11px;
 }
 
@@ -211,7 +231,7 @@
 
 .bx-wrapper, .bx-viewport {
 
-    height: 270px !important;
+    height: calc( var(--HeightBxSlider) *1px) !important;
 }
 
 
@@ -289,10 +309,8 @@ body{
 
 .st-SingleReferences{
     background-color: #fff;
-    #box-shadow: 0px 10px 10px -10px rgba(161,156,161,1), 0px -10px 10px -10px rgba(161 , 156 , 161 ,1);
     box-shadow: 0px 6px 10px 1px rgba(0,0,0,1), 0px -2px 3px -18px rgba(0 , 0, 0 ,1);
 }
-
 
 .bx-wrapper{
 
