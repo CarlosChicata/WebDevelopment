@@ -16,57 +16,10 @@
          <input class="sk-InputHeader" type="text" placeholder="say the name of restaurant or type of kitchens in the city you want">
 
          external template for vuejs components --->
-        <style>
-.sk-TextReferences > p:not( :first-child ){
-    font-family: "Arbutus Slab";
-    font-size: 13px;
-    font-Weight:500;
-}
-        </style>
-    </head>
-    <body >
-        <div class="sk-header">
-            <img src="/static/image/BN5.jpeg">
-            <div class="sk-SubHeader">
-                <div class="sk-BotonHeader" id="Lenguaje">
-                    <button v-on:click="CambioLenguaje(0)" class="st-BotonHeader"> Español </button>
-                    <button v-on:click="CambioLenguaje(1)" class="st-BotonHeader st-BotonDecoretionHeader"> English </button>
-                </div>
-                <p class="st-TituloHeader sk-TituloHeader">Restafind </p>
-                <p class="st-SubtituloHeader sk-SubtituloHeader">finding for place by good moments</p>
-                <form class="sk-BuscadorHeader" id="Opciones">
-                    <input class="sk-ComponenteBuscadorHeader" list="OpcionesBusqueda">
-                    <datalist id="OpcionesBusqueda">
-                        <option v-for="city in City" :value="city.text"> {%raw%}{{ city.text}}{%endraw%}</option>
-                    </datalist>
-                    <select class="sk-ComponenteBuscadorHeader">
-                        <option v-for="kitchen in Kitchen" :value="kitchen.text"> {%raw%}{{kitchen.text}}{%endraw%}</option>
-                    </select>
-                    <button type="submit" class="st-BotonSubmitHeader"> search </button>
-                </form>
-            </div>
-        </div>
-        <div class="sk-references" id="Referencias">
-            <p class="sk-TituloReferences st-TituloReferences">Sabias que </p>
-            <div class="bxslider">
-                <div class="sk-ContainerSingleReferences" v-for="info in Gastronomia">
-                    <div class="sk-SingleReferences st-SingleReferences">
-                        <img class="sk-ImageReferences" v-bind:src="info.imagen">
-                        <div class="sk-TextReferences">
-                            <p class="st-TextoTituloReferences">{%raw%}{{info.titulo}}{%endraw%}</p>
-                            <p class="st-Proto" >{%raw%}{{info.origen}}{%endraw%}</p>
-                            <p class="st-Proto" >{%raw%}{{info.conocimiento}}{%endraw%}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+                <!----
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="/static/js/Logistica.js"></script>
-    <script>
+        <script>
         $(function(){
   $('.bxslider').bxSlider({
     auto:true,
@@ -76,5 +29,27 @@
   });
 });
     </script>
+    --->
+    </head>
+    <body>
+        <template id="cabeza-template">
+            <div class="sk-header">
+                <img src="/static/image/BN5.jpeg">
+                <div class="sk-SubHeader">
+                    <div class="sk-BotonHeader" >
+                        <button v-on:click="CambioLenguaje(0)" class="st-BotonHeader"> Español </button>
+                        <button v-on:click="CambioLenguaje(1)" class="st-BotonHeader st-BotonDecoretionHeader"> English </button>
+                    </div>
+                    <p class="st-TituloHeader sk-TituloHeader">{%raw%}Titulo{%endraw%}</p>
+                <p class="st-SubtituloHeader sk-SubtituloHeader">{%raw%}Subtitulo{%endraw%}</p>
+                </div>
+            </div>
+        </template>
+        <!------------->
+        <div id="GestorGeneral">
+            <cabezaprincipal ></cabezaprincipal>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="/static/js/Logistica.js"></script>
     </body>
 </html>

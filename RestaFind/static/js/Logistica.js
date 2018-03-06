@@ -5,72 +5,56 @@
     pero escogimos esto por un motivos mas: aprendizaje sobre componentes en Vue.js
 **/
 
-/// maneja todo sobre la informacion del a nivel busqueda
-var app1 = new Vue({
-    el:"#Opciones",
-    data:{
-        City:[
-            { text:"choose your place"},
-            {text:"camana, arequipa"},
-            {text:"ocoña, arequipa"},
-            {text:"arequipa, arequipa"},
-            {text:"caraveli, arequipa"},
-            {text:"condesuyo, arequipa"}
-        ],
-        Kitchen:[
-            {text:"choose your kitchen"},
-            {text:"breakfast place"},
-            {text:"restaurants"},
-            {text:"coffees"},
-            {text:"cakeshop"},
-            {text:"bar and pubs"}
-        ]
+/* data global **/
 
+var spa = {
+    Header:{
+        Titulo: "RestaFind",
+        Subtitulo:"Buscando un buen lugar por un buen momento",
+        BotonSubmit:"busca"
     }
-})
+};
 
-/// maneja la gestion del idioma del app
-var app2 = new Vue({
-    el:"#Lenguaje",
-    data:{
-        Identificador : 1
+var eng = {
+    Header:{
+        Titulo: "RestaFind",
+        Subtitulo:"find a good place by a good moment",
+        BotonSubmit : "search"
+    }
+};
+
+var lenguaje = [ spa, eng ];
+/****  componentes ****/
+
+var cabeza = {
+    props: ["Text"],
+    data: function(){
+        return{
+            Identificador: 1,
+            Texto : Text
+        }
     },
+    template : "#cabeza-template",
     methods:{
-        CambioLenguaje: function( idx ){
-            var hijos = this.$el.getElementsByClassName("st-BotonHeader")
-            hijos[ this.Identificador ].classList.remove("st-BotonDecoretionHeader")
-            hijos[ idx ].classList.add("st-BotonDecoretionHeader")
-            this.Identificador = idx
+            CambioLenguaje: function( idx ){
+                var hijos = this.$el.getElementsByClassName("st-BotonHeader")
+                hijos[ this.Identificador ].classList.remove("st-BotonDecoretionHeader")
+                hijos[ idx ].classList.add("st-BotonDecoretionHeader")
+                this.Identificador = idx
+                console.log( this.Texto[ idx ].Header.Subtitulo )
         }
     }
+};
+
+/**** esquema general *****/
+
+var app = new Vue({
+   el : "#GestorGeneral",
+   data:{
+        Idioma: spa,
+   },
+   components:{
+       "cabezaprincipal" : cabeza
+   }
 })
-
-var app3 = new Vue({
-    el:"#Referencias",
-    data:{
-        Gastronomia:[
-            {
-                titulo:"Causa limeña",
-                origen:"lima , lima",
-                conocimiento:"Nacido en el Perú pre-independentista, que buscando dinero para poder pagar los gastos de la guerra inventan este platillo.",
-                imagen:"/static/image/CausaRellena.jpg"
-            },
-            {
-                titulo:"Anticucho de corazón de vaca",
-                origen:"lima , lima",
-                conocimiento:"Nace en el Perú antiguo que al tener los intestinos de las  vacas, los africanos recidentes inventan esto para comer.",
-                imagen:"/static/image/Anticuchos.jpg"
-            },
-            {
-                titulo:"Suspiro a la limeña",
-                origen:"lima , lima",
-                conocimiento:"Este es un postre encargado de dar sabor a la cocina peruana proveiente de lima, que por su sabor es muy conocido en el pais.",
-                imagen:"/static/image/SuspiroLimeno.jpg"
-            }
-        ]
-    }
-
-})
-
-//// area de referencias
 

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,53 +7,139 @@
         <meta name="Full Stack" content="Front-end: Vue,js, bootstrap, html5, js, css3. Backend: Flask, python. Data: Kaggle dataset">
         <title> RestaFind: to find good places for good moments</title>
         <!--- those are external files will use--->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='reset.css')}}">
         <link rel="stylesheet" type="text/css" href="/static/Principal.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
-        <!--- external template for vuejs components --->
+        <!---
+         <input class="sk-InputHeader" type="text" placeholder="say the name of restaurant or type of kitchens in the city you want">
 
+         external template for vuejs components --->
+        <style>
+.sk-TextReferences > p:not( :first-child ){
+    font-family: "Arbutus Slab";
+    font-size: 13px;
+    font-Weight:500;
+}
+        </style>
     </head>
-    <body style="background:url(/static/image/BK8N.png);" >
-    <div class="EsquemaGeneral" id="referencias" >
-        <header>
-            <p class="st-Titulo EsquemaTitulo">RestaFind</p>
-            <p class="st-Subtitulo">find a good place for a good moments</p>
-        </header>
-        <form class="st-Buscador EsquemaBuscador" id="buscador">
-            <header class="st-TituloBuscador" >{%raw%}{{titulo}}{%endraw%}</header>
-            <input class="st-BuscadorTexto" type="text" name="description" v-model="descripcion"><br>
-            <input type="submit" class="st-BuscadorBoton" value="finding the restaurant">
-        </form>
-        <div class="EsquemaReferencias" >
-            <!---:style="{ 'background-image' : 'url(' + ref.image + ')' }" -->
-            <div v-for="ref in consultores" class="EsquemaTarjeta" v-bind:style="{ 'background-image' : 'url(' + ref.image + ')' }">
-                <div class="st-Tarjeta">
-                    <div class="st-TarjetaOpacidad">
-                        <p class="st-TarjetaTitulo">{%raw%}{{ref.name}}{%endraw%}</p>
-                        <p class="st-TarjetaContenido">{%raw%}{{ref.comentario}}{%endraw%}</p>
-                    </div>
+    <body >
+        <div class="sk-header">
+            <img src="/static/image/BN5.jpeg">
+            <div class="sk-SubHeader">
+                <div class="sk-BotonHeader" id="Lenguaje">
+                    <button v-on:click="CambioLenguaje(0)" class="st-BotonHeader"> Español </button>
+                    <button v-on:click="CambioLenguaje(1)" class="st-BotonHeader st-BotonDecoretionHeader"> English </button>
                 </div>
+                <p class="st-TituloHeader sk-TituloHeader">Restafind </p>
+                <p class="st-SubtituloHeader sk-SubtituloHeader">finding for place by good moments</p>
+                <form class="sk-BuscadorHeader" id="Opciones">
+                    <input class="sk-ComponenteBuscadorHeader" list="OpcionesBusqueda">
+                    <datalist id="OpcionesBusqueda">
+                        <option v-for="city in City" :value="city.text"> {%raw%}{{ city.text}}{%endraw%}</option>
+                    </datalist>
+                    <select class="sk-ComponenteBuscadorHeader">
+                        <option v-for="kitchen in Kitchen" :value="kitchen.text"> {%raw%}{{kitchen.text}}{%endraw%}</option>
+                    </select>
+                    <button type="submit" class="st-BotonSubmitHeader"> search </button>
+                </form>
             </div>
         </div>
-        <div v-if="consulta"  >
-            <div v-for="rpta in Respuestas">
-                <div class="flip-container">
-                    <div class="flipper">
-                        <div class="front" style="background:url('/static/image/22.jpg')">
-                        </div>
-                        <div class="back">
-                            <p>{%raw%}{{ rpta.name }}{%endraw%}</p>
-                            <p>{%raw%}{{ rpta.horarios }}{%endraw%}</p>
-                            <p>{%raw%}{{ rpta.comida }}{%endraw%}</p>
-                            <p>{%raw%}{{ rpta.servicio }}{%endraw%}</p>
-                            <p>{%raw%}{{ rpta.tipo }}{%endraw%}</p>
+        <div class="sk-references" id="Referencias">
+            <p class="sk-TituloReferences st-TituloReferences">Sabias que </p>
+            <div class="bxslider">
+                <div class="sk-ContainerSingleReferences" v-for="info in Gastronomia">
+                    <div class="sk-SingleReferences st-SingleReferences">
+                        <img class="sk-ImageReferences" v-bind:src="info.imagen">
+                        <div class="sk-TextReferences">
+                            <p class="st-TextoTituloReferences">{%raw%}{{info.titulo}}{%endraw%}</p>
+                            <p class="st-Proto" >{%raw%}{{info.origen}}{%endraw%}</p>
+                            <p class="st-Proto" >{%raw%}{{info.conocimiento}}{%endraw%}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-<script src="/static/js/Logistica.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="/static/js/Logistica.js"></script>
+    <script>
+        $(function(){
+  $('.bxslider').bxSlider({
+    auto:true,
+    pause:5000,
+    controls:false,
+    adaptiveHeight:true
+  });
+});
+    </script>
     </body>
 </html>
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////
+var app1 = new Vue({
+    el:"#Opciones",
+    data:{
+        City:[
+            { text:"choose your place"},
+            {text:"camana, arequipa"},
+            {text:"ocoña, arequipa"},
+            {text:"arequipa, arequipa"},
+            {text:"caraveli, arequipa"},
+            {text:"condesuyo, arequipa"}
+        ],
+        Kitchen:[
+            {text:"choose your kitchen"},
+            {text:"breakfast place"},
+            {text:"restaurants"},
+            {text:"coffees"},
+            {text:"cakeshop"},
+            {text:"bar and pubs"}
+        ]
+
+    }
+})
+
+/// maneja la gestion del idioma del app
+var app2 = new Vue({
+    el:"#Lenguaje",
+    data:{
+        Identificador : 1
+    },
+    methods:{
+        CambioLenguaje: function( idx ){
+            var hijos = this.$el.getElementsByClassName("st-BotonHeader")
+            hijos[ this.Identificador ].classList.remove("st-BotonDecoretionHeader")
+            hijos[ idx ].classList.add("st-BotonDecoretionHeader")
+            this.Identificador = idx
+        }
+    }
+})
+
+var app3 = new Vue({
+    el:"#Referencias",
+    data:{
+        Gastronomia:[
+            {
+                titulo:"Causa limeña",
+                origen:"lima , lima",
+                conocimiento:"Nacido en el Perú pre-independentista, que buscando dinero para poder pagar los gastos de la guerra inventan este platillo.",
+                imagen:"/static/image/CausaRellena.jpg"
+            },
+            {
+                titulo:"Anticucho de corazón de vaca",
+                origen:"lima , lima",
+                conocimiento:"Nace en el Perú antiguo que al tener los intestinos de las  vacas, los africanos recidentes inventan esto para comer.",
+                imagen:"/static/image/Anticuchos.jpg"
+            },
+            {
+                titulo:"Suspiro a la limeña",
+                origen:"lima , lima",
+                conocimiento:"Este es un postre encargado de dar sabor a la cocina peruana proveiente de lima, que por su sabor es muy conocido en el pais.",
+                imagen:"/static/image/SuspiroLimeno.jpg"
+            }
+        ]
+    }
+
+})
