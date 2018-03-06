@@ -82,6 +82,9 @@
     --FontSizeTituloHeader:6;
     --FontSizeSubtituloHeader: 35;
     --FlexDirectionBuscadorHeader: row;
+    --HeightBuscadorHeader: 35;
+    --AlignItemsBuscadorHeader:none;
+    --JustifyContentBuscadorHeader: center ;
 
     --HeightBxSlider: 270;
     --WidthImageReferences:200;
@@ -99,6 +102,9 @@
         --FontSizeTituloHeader:4;
         --FontSizeSubtituloHeader: 27;
         --FlexDirectionBuscadorHeader: column;
+        --HeightBuscadorHeader :110;
+        --AlignItemsBuscadorHeader: center ;
+        --JustifyContentBuscadorHeader: space-around ;
 
         --HeightBxSlider:500;
         --WidthImageReferences:350;
@@ -162,10 +168,11 @@
 .sk-BuscadorHeader{
     width: 70%;
     max-width:1220px;
-    height:35px;
+    height: calc( var( --HeightBuscadorHeader )*1px );
     display: flex;
     flex-direction: var(--FlexDirectionBuscadorHeader);
-    justify-content: center;
+    justify-content: var(--JustifyContentBuscadorHeader);
+    align-items: var(--AlignItemsBuscadorHeader );
 }
 
 .sk-ComponenteBuscadorHeader{
