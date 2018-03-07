@@ -40,14 +40,24 @@
                         <button v-on:click="CambioLenguaje(0)" class="st-BotonHeader"> Español </button>
                         <button v-on:click="CambioLenguaje(1)" class="st-BotonHeader st-BotonDecoretionHeader"> English </button>
                     </div>
-                    <p class="st-TituloHeader sk-TituloHeader">{%raw%}Titulo{%endraw%}</p>
-                <p class="st-SubtituloHeader sk-SubtituloHeader">{%raw%}Subtitulo{%endraw%}</p>
+                    <p class="st-TituloHeader sk-TituloHeader">{%raw%}{{Idioma.Titulo}}{%endraw%}</p>
+                    <p class="st-SubtituloHeader sk-SubtituloHeader">{%raw%}{{Idioma.Subtitulo}}{%endraw%}</p>
+                    <form class="sk-BuscadorHeader">
+                        <input class="sk-ComponenteBuscadorHeader" list="OpcionesBusqueda">
+                        <datalist id="OpcionesBusqueda">
+                            <option v-for="city in Ubicacion" :value="city.text"> {%raw%}{{ city.text}}{%endraw%}</option>
+                        </datalist>
+                        <select class="sk-ComponenteBuscadorHeader">
+                            <option v-for="kitchen in Idioma.Opciones" :value="kitchen.text"> {%raw%}{{kitchen.text}}{%endraw%}</option>
+                        </select>
+                        <button type="submit" class="st-BotonSubmitHeader">{%raw%}{{Idioma.BotonSubmit}}{%endraw%}</button>
+                    </form>
                 </div>
             </div>
         </template>
-        <!------------->
+        <!------ Esquema general ------->
         <div id="GestorGeneral">
-            <cabezaprincipal ></cabezaprincipal>
+            <cabezaprincipal v-on:cambioidioma="CambiarIdioma" v-bind:Idioma="Idiomag.Idioma" ></cabezaprincipal>
         </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
     <script src="/static/js/Logistica.js"></script>
