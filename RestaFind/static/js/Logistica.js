@@ -47,9 +47,29 @@ var Lugares = [
     { text:"condesuyo, arequipa" }
 ]
 
-
+var info =[
+    {
+      titulo:"Causa limeña",
+      origen:"lima , lima",
+      conocimiento:["Nacido en el Perú pre-independentista, que buscando dinero para poder pagar los gastos de la guerra inventan este platillo.", "Born in pre-independence Peru, who seeks money to pay the expenses of war invent this dish."],
+      imagen:"/static/image/CausaRellena.jpg"
+    },
+    {
+      titulo:"Anticucho de corazón de vaca",
+      origen:"lima , lima",
+      conocimiento:["Nace en el Perú antiguo que al tener los intestinos de las  vacas, los africanos recidentes inventan esto para comer.", "It was born in ancient Peru that having the intestines of the cows, the reclining Africans invent this to eat."],
+      imagen:"/static/image/Anticuchos.jpg"
+    },
+    {
+      titulo:"Suspiro a la limeña",
+      origen:"lima , lima",
+      conocimiento:["Este es un postre encargado de dar sabor a la cocina peruana proveniente de lima, que por su sabor es muy conocido en el pais.","This is a dessert in charge of flavoring the Peruvian cuisine from Lima, which for its flavor is well known in the country." ],
+      imagen:"/static/image/SuspiroLimeno.jpg"
+    }
+]
 
 var lenguaje = [ spa, eng ];
+
 /****  componentes ****/
 
 var cabeza = {
@@ -73,20 +93,35 @@ var cabeza = {
     }
 };
 
+var referencia = {
+    props:["idx"],
+    template : "#referenciaprincipal-template",
+    data : function(){
+        return{
+            Indice : 1,
+            Informacion : info
+        }
+    }
+};
+
 /**** esquema general *****/
 
 var app = new Vue({
    el : "#GestorGeneral",
    data:{
-        Idiomag : lenguaje[ 1 ]
+        Idiomag : lenguaje[ 1 ],
+        IndiceLenguaje: 0
    },
    methods:{
         CambiarIdioma: function( obj ){
             this.Idiomag = lenguaje[ obj.indice ]
+            this.IndiceLenguaje = obj.indice
         }
    },
    components:{
-       "cabezaprincipal" : cabeza
+       "cabezaprincipal" : cabeza,
+       "referenciaprincipal":referencia
+
    }
 
 })

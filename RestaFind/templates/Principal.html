@@ -32,6 +32,7 @@
     --->
     </head>
     <body>
+        <!---- templates tags de los componentes ---->
         <template id="cabeza-template">
             <div class="sk-header">
                 <img src="/static/image/BN5.jpeg">
@@ -55,11 +56,41 @@
                 </div>
             </div>
         </template>
+        <template id="referenciaprincipal-template">
+            <div class="sk-references" id="Referencias">
+                <p class="sk-TituloReferences st-TituloReferences">Sabias que </p>
+                <div class="bxslider">
+                    <div class="sk-ContainerSingleReferences" v-for="info in Informacion">
+                        <div class="sk-SingleReferences st-SingleReferences">
+                            <img class="sk-ImageReferences" v-bind:src="info.imagen">
+                            <div class="sk-TextReferences">
+                                <p class="st-TextoTituloReferences">{%raw%}{{info.titulo}}{%endraw%}</p>
+                                <p class="st-Proto" >{%raw%}{{info.origen}}{%endraw%}</p>
+                                <p class="st-Proto" >{%raw%}{{info.conocimiento[idx]}}{%endraw%}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
         <!------ Esquema general ------->
         <div id="GestorGeneral">
             <cabezaprincipal v-on:cambioidioma="CambiarIdioma" v-bind:Idioma="Idiomag.Idioma" ></cabezaprincipal>
+            <referenciaprincipal v-bind:idx="IndiceLenguaje"></referenciaprincipal>
         </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    <script src="/static/js/Logistica.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+        <script>
+            $(function(){
+                $('.bxslider').bxSlider({
+                    auto:true,
+                    pause:5000,
+                    controls:false,
+                    adaptiveHeight:true
+                });
+            });
+        </script>
+        <script src="/static/js/Logistica.js"></script>
     </body>
 </html>
