@@ -104,6 +104,11 @@ var referencia = {
     }
 };
 
+var respuesta = {
+    template: "#respuestas-template"
+};
+
+
 /**** esquema general *****/
 
 var app = new Vue({
@@ -120,7 +125,8 @@ var app = new Vue({
    },
    components:{
        "cabezaprincipal" : cabeza,
-       "referenciaprincipal":referencia
+       "referenciaprincipal":referencia,
+       "respuestaprincipal":respuesta
 
    }
 
