@@ -22,7 +22,6 @@ def Procesando():
 
 
 if __name__ == "__main__":
-    inicio = True
     Convertidor=pickle.load( open("TransformadorDataSMS.pickle","rb"))
     Modelo = joblib.load("ClasificadorSMSSpam.pkl")
     app.run( debug = True )

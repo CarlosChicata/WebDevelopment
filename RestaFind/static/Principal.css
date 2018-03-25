@@ -119,6 +119,7 @@
 }
 
 
+/*********************************************************************/
 /**** css - diseño ****/
 /** area de header **/
 
@@ -232,6 +233,7 @@
 }
 
 .sk-TextReferences > p:not(:last-child){
+
     margin-bottom:10px;
 }
 
@@ -240,9 +242,44 @@
     height: calc( var(--HeightBxSlider) *1px) !important;
 }
 
+/* area de resultados */
 
+.sk-EspacioResultados{
+    width: 100%;
+    perspective : 600px;
+
+}
+
+.sk-EspacioResultado{
+    width: 250px;
+    height:300px;
+    transform-style:preserve-3d;
+    transition: transform 1s;
+}
+
+.sk-EspacioResultado .sk-Front img{
+    width:250px;
+    height:300px;
+    object-fit: cover;
+}
+
+.sk-EspacioResultado div{
+    text-align: center;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.sk-EspacioResultado .sk-Back{
+    transform: rotateY( 180deg );
+}
+
+.sk-Flipped{
+    transform: rotateY( 180deg) ;
+}
+
+/*********************************************************************/
 /**** css - estilo ****/
-/** area de header**/
+/* area de header */
 
 body{
     background-color:#fafafa;
@@ -330,3 +367,4 @@ body{
     text-shadow: 1px 1px black;
 }
 
+/* area de resultados */
