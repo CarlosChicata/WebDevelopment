@@ -270,7 +270,10 @@
 }
 
 .sk-EspacioResultado .sk-Back{
-    transform: rotateY( 180deg );
+    background-color: white;
+    height: 300px;
+    width: 250px;
+    transform: rotateY( -180deg );
 }
 
 .sk-Flipped{

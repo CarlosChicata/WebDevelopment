@@ -108,9 +108,7 @@ var respuesta = {
     template: "#respuestas-template",
     methods:{
         Flipping: function(){
-            var clases = this.$el.getElementsByClassName("sk-EspacioResultado")
-            clases[0].classList.add("sk-Flipped")
-
+            $(".sk-EspacioResultado").toggleClass("sk-Flipped")
         }
     }
 };
